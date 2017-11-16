@@ -6,5 +6,16 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'app';
+  externalCounter = 0;
+  oddArr: Array<number> = [];
+  evenArr: Array<number> = [];
+
+  onCounterChange(counter: {count: number}) {
+    this.externalCounter = counter.count;
+    if (this.externalCounter % 2 === 0) {
+      this.oddArr.push(this.externalCounter);
+    } else {
+      this.evenArr.push(this.externalCounter);
+    }
+  }
 }

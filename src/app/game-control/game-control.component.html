@@ -1,0 +1,7 @@
+<button class="btn btn-success" (click)="onStartGame()">Start Game</button>
+<button class="btn btn-danger"
+        style="margin-left: 20px;"
+        (click)="onStopGame()">
+  Stop Game</button>
+
+<div class="myCountContainer" *ngIf="count !== 0"><span class="myCount">{{ count }}</span></div>
